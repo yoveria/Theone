@@ -1,6 +1,6 @@
 #include "student.h"
 using namespace std;
-//-----------------------------ÅÅĞòÓÃº¯Êı
+//-----------------------------æ’åºç”¨å‡½æ•°
 bool cmp_xuhao(students a, students b)
 {
     return a.get_xuhao() < b.get_xuhao();
@@ -13,7 +13,7 @@ bool cmp_score(students a, students b)
 {
     return (a.get_score1() + a.get_score2()) > (b.get_score1() + b.get_score2());
 }
-//------------------------------È¡ÄÚÈİº¯Êı
+//------------------------------å–å†…å®¹å‡½æ•°
 long long students::get_xuhao()
 {
     return xuhao;
@@ -34,7 +34,7 @@ int students::get_pai()
 {
     return pai;
 }
-//-------------------------------³õÊ¼»¯
+//-------------------------------åˆå§‹åŒ–
 void ku::jiazai_s()
 {
     int n = 0;
@@ -55,7 +55,7 @@ void ku::jiazai_s()
     {
         if (n == 0)
         {
-            cout << "ÔİÎŞÑ§Éú\n";
+            cout << "æš‚æ— å­¦ç”Ÿ\n";
         }
         for (int i = 0; i < n; i++)
         {
@@ -66,16 +66,16 @@ void ku::jiazai_s()
         s_num = n;
     }
 }
-//------------------------------²éÑ¯Ñ§Éú
+//------------------------------æŸ¥è¯¢å­¦ç”Ÿ
 void ku::find_()
 {
     int input = 0;
     do
     {
         cout << "=============================" << endl;
-        cout << "      1.  °´Ñ§ºÅ     " << endl;  //
-        cout << "      2.  °´ĞÕÃû      " << endl; //
-        cout << "      0.  ·µ»Ø        " << endl;
+        cout << "      1.  æŒ‰å­¦å·     " << endl;  //
+        cout << "      2.  æŒ‰å§“å      " << endl; //
+        cout << "      0.  è¿”å›        " << endl;
         cout << "=============================" << endl;
         cin >> input;
         if (input == 1)
@@ -90,16 +90,16 @@ void ku::find_()
 }
 void ku::find_w_name()
 {
-    cout << "ÇëÊäÈëÒª²éÑ¯Ñ§ÉúµÄĞÕÃû:>";
+    cout << "è¯·è¾“å…¥è¦æŸ¥è¯¢å­¦ç”Ÿçš„å§“å:>";
     string temp;
     cin >> temp;
     for (int i = 0; i < st.size(); i++)
     {
         if (temp == st[i].get_name())
         {
-            cout << left << setw(8) << "ĞÕÃû" << " " << left << setw(15)
-                 << "Ñ§ºÅ" << left << setw(10) << "ÊıÑ§³É¼¨"
-                 << left << setw(15) << "Ó¢Óï³É¼¨" << "\n";
+            cout << left << setw(8) << "å§“å" << " " << left << setw(15)
+                 << "å­¦å·" << left << setw(10) << "æ•°å­¦æˆç»©"
+                 << left << setw(15) << "è‹±è¯­æˆç»©" << "\n";
             cout << left << setw(8) << st[i].name << " " << left << setw(15)
                  << st[i].xuhao << left << setw(10) << st[i].score1
                  << left << setw(15) << st[i].score2 << "\n";
@@ -109,16 +109,16 @@ void ku::find_w_name()
 }
 void ku::find_w_xuhao()
 {
-    cout << "ÇëÊäÈëÒª²éÑ¯Ñ§ÉúµÄÑ§ºÅ:>";
+    cout << "è¯·è¾“å…¥è¦æŸ¥è¯¢å­¦ç”Ÿçš„å­¦å·:>";
     long long temp;
     cin >> temp;
     for (int i = 0; i < st.size(); i++)
     {
         if (temp == st[i].get_xuhao())
         {
-            cout << left << setw(8) << "ĞÕÃû" << " " << left << setw(15)
-                 << "Ñ§ºÅ" << left << setw(10) << "ÊıÑ§³É¼¨"
-                 << left << setw(15) << "Ó¢Óï³É¼¨" << "\n";
+            cout << left << setw(8) << "å§“å" << " " << left << setw(15)
+                 << "å­¦å·" << left << setw(10) << "æ•°å­¦æˆç»©"
+                 << left << setw(15) << "è‹±è¯­æˆç»©" << "\n";
             cout << right << setw(8) << st[i].name << " " << left << setw(15)
                  << st[i].xuhao << left << setw(8) << st[i].score1
                  << left << setw(8) << st[i].score2 << "\n";
@@ -126,38 +126,38 @@ void ku::find_w_xuhao()
         }
     }
 }
-//------------------------------Ìí¼ÓÑ§Éú
+//------------------------------æ·»åŠ å­¦ç”Ÿ
 void ku::tianjia()
 {
     ofstream ifo(".\\the_ss.txt", ios::app);
     if (ifo)
     {
         students tmp;
-        cout << "ÇëÊäÈëÑ§ÉúĞÕÃû£º";
+        cout << "è¯·è¾“å…¥å­¦ç”Ÿå§“åï¼š";
         cin >> tmp.name;
-        cout << "ÇëÊäÈëÑ§ºÅ£º";
+        cout << "è¯·è¾“å…¥å­¦å·ï¼š";
         cin >> tmp.xuhao;
-        cout << "ÇëÊäÈëÊıÑ§³É¼¨£º";
+        cout << "è¯·è¾“å…¥æ•°å­¦æˆç»©ï¼š";
         cin >> tmp.score1;
-        cout << "ÇëÊäÈëÓ¢Óï³É¼¨£º";
+        cout << "è¯·è¾“å…¥è‹±è¯­æˆç»©ï¼š";
         cin >> tmp.score2;
         s_num++;
         tmp.pai = s_num;
-        cout << "¡¾Ìí¼Ó³É¹¦¡¿\n";
+        cout << "ã€æ·»åŠ æˆåŠŸã€‘\n";
         st.push_back(tmp);
         ifo << s_num << " " << tmp.name << " " << tmp.xuhao << " " << tmp.score1 << " " << tmp.score2 << "\n";
     }
     else
     {
-        cerr << "±§Ç¸£¬¼ÓÔØÊ§°Ü¡­¡­";
+        cerr << "æŠ±æ­‰ï¼ŒåŠ è½½å¤±è´¥â€¦â€¦";
     }
     Sleep(500);
     system("cls");
 }
-//------------------------------------É¾³ıÑ§Éú
+//------------------------------------åˆ é™¤å­¦ç”Ÿ
 void ku::del_inf()
 {
-    cout << "ÇëÊäÈëÒªÉ¾³ıĞÅÏ¢µÄÑ§ÉúµÄÑ§ºÅ:>";
+    cout << "è¯·è¾“å…¥è¦åˆ é™¤ä¿¡æ¯çš„å­¦ç”Ÿçš„å­¦å·:>";
     long long temp;
     cin >> temp;
     for (int i = 0; i < st.size(); i++)
@@ -168,7 +168,7 @@ void ku::del_inf()
             s_num--;
             ss_wenben();
 
-            cout << "¡¾É¾³ı³É¹¦¡¿\n";
+            cout << "ã€åˆ é™¤æˆåŠŸã€‘\n";
             Sleep(500);
             system("cls");
         }
@@ -178,7 +178,7 @@ void ku::del_inf()
 void ku::change_inf()
 {
     cout << "=============================\n";
-    cout << "ÇëÊäÈëÒªĞŞ¸ÄÑ§ÉúµÄÑ§ºÅ:>";
+    cout << "è¯·è¾“å…¥è¦ä¿®æ”¹å­¦ç”Ÿçš„å­¦å·:>";
     long long tmp;
     cin >> tmp;
     int snum = st.size();
@@ -187,40 +187,40 @@ void ku::change_inf()
         if (st[i].xuhao == tmp)
         {
             cout << "=============================\n";
-            cout << "       1.ĞÕÃû       \n";
-            cout << "       2.ÊıÑ§³É¼¨       \n";
-            cout << "       3.Ó¢Óï³É¼¨       \n";
-            cout << "       0.·µ»Ø       \n";
-            cout << "ÇëÑ¡ÔñÒªĞŞ¸ÄµÄÄÚÈİ:>";
+            cout << "       1.å§“å       \n";
+            cout << "       2.æ•°å­¦æˆç»©       \n";
+            cout << "       3.è‹±è¯­æˆç»©       \n";
+            cout << "       0.è¿”å›       \n";
+            cout << "è¯·é€‰æ‹©è¦ä¿®æ”¹çš„å†…å®¹:>";
             int shu;
             cin >> shu;
             switch (shu)
             {
             case 1:
-                cout << "ÇëÊäÈëĞÕÃû:>";
+                cout << "è¯·è¾“å…¥å§“å:>";
                 cin >> st[i].name;
                 break;
             case 2:
-                cout << "ÇëÊäÈëÊıÑ§³É¼¨:>";
+                cout << "è¯·è¾“å…¥æ•°å­¦æˆç»©:>";
                 cin >> st[i].score1;
                 break;
             case 3:
-                cout << "ÇëÊäÈëÓ¢Óï³É¼¨:>";
+                cout << "è¯·è¾“å…¥è‹±è¯­æˆç»©:>";
                 cin >> st[i].score2;
                 break;
             case 0:
                 Sleep(500);
-                cout << "¡¾·µ»Ø³É¹¦¡¿" << endl
+                cout << "ã€è¿”å›æˆåŠŸã€‘" << endl
                      << endl;
                 break;
             default:
-                cout << "ÊäÈë´íÎó£¬ÒÑ·µ»Ø" << endl;
+                cout << "è¾“å…¥é”™è¯¯ï¼Œå·²è¿”å›" << endl;
                 break;
             }
             if (1 <= shu && shu <= 3)
             {
                 ss_wenben();
-                cout << "ĞŞ¸Ä³É¹¦£¡\n";
+                cout << "ä¿®æ”¹æˆåŠŸï¼\n";
             }
         }
     }
@@ -232,9 +232,9 @@ void ku::show_()
     do
     {
         cout << "=============================" << endl;
-        cout << "      1.  °´Ñ§ºÅ     " << endl;    //
-        cout << "      2.  °´×Ü³É¼¨      " << endl; //
-        cout << "      0.  ·µ»Ø        " << endl;
+        cout << "      1.  æŒ‰å­¦å·     " << endl;    //
+        cout << "      2.  æŒ‰æ€»æˆç»©      " << endl; //
+        cout << "      0.  è¿”å›        " << endl;
         cout << "=============================" << endl;
         cin >> input;
         if (input == 1)
@@ -251,9 +251,9 @@ void ku::show_()
 void ku::zhanshi_w_xuhao()
 {
     sort(st.begin(), st.end(), cmp_xuhao);
-    cout << left << setw(8) << "ĞÕÃû" << " " << left << setw(15)
-         << "Ñ§ºÅ" << left << setw(10) << "ÊıÑ§³É¼¨"
-         << left << setw(15) << "Ó¢Óï³É¼¨" << "\n";
+    cout << left << setw(8) << "å§“å" << " " << left << setw(15)
+         << "å­¦å·" << left << setw(10) << "æ•°å­¦æˆç»©"
+         << left << setw(15) << "è‹±è¯­æˆç»©" << "\n";
     for (int i = 0; i < (int)st.size(); i++)
     {
         cout << left << setw(8) << st[i].name << " " << left << setw(15)
@@ -266,9 +266,9 @@ void ku::zhanshi_w_xuhao()
 void ku::zhanshi_w_score()
 {
     sort(st.begin(), st.end(), cmp_score);
-    cout << left << setw(8) << "ĞÕÃû" << " " << left << setw(15)
-         << "Ñ§ºÅ" << left << setw(10) << "ÊıÑ§³É¼¨"
-         << left << setw(15) << "Ó¢Óï³É¼¨" << "\n";
+    cout << left << setw(8) << "å§“å" << " " << left << setw(15)
+         << "å­¦å·" << left << setw(10) << "æ•°å­¦æˆç»©"
+         << left << setw(15) << "è‹±è¯­æˆç»©" << "\n";
     for (int i = 0; i < (int)st.size(); i++)
     {
         cout << left << setw(8) << st[i].name << " " << left << setw(15)
