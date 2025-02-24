@@ -10,7 +10,7 @@ int main()
     do
     {
         menu();
-        printf("ÇëÊäÈëÄúµÄÑ¡Ôñ:>");
+        printf("è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©:>");
         cin >> input;
         system("cls");
         switch (input)
@@ -30,10 +30,10 @@ int main()
             lib.show_();
         case 0:
             Sleep(600);
-            cout << "¡¾ÍË³ö³É¹¦¡¿" << "\n";
+            cout << "ã€é€€å‡ºæˆåŠŸã€‘" << "\n";
             break;
         default:
-            cout << "ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë" << endl;
+            cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
             break;
         }
     } while (input);
